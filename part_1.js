@@ -22,39 +22,54 @@ function fibonacci(n) {
 console.log(fibonacci(20));
 
 //zadanie 2
-function isPalindrom(input){
+function isPalindrom(input) {
     let result;
     for (let i = 0; i < input.length; i++) {
-        if(input[i]===input[input.length-i-1]){
-            result=true;
-        }else{
+        if (input[i] === input[input.length - i - 1]) {
+            result = true;
+        } else {
             result = false;
         }
     }
     return result;
 }
-console.log(isPalindrom([1,2,2,1]));
+
+console.log(isPalindrom([1, 2, 2, 1]));
 
 //zadanie 3
-function whatType(input){
+function whatType(input) {
     return typeof (input);
 }
-console.log(whatType());
+
+console.log(whatType(12));
 
 //zadanie 4
-function rozmieniarka(wartosc,nominaly){
+function compareNr(a, b) {
+    return b - a;
+}
+
+function rozmieniarka(wartosc, nominaly) {
     let suma = wartosc;
-    let tab;
-    if(nominaly.includes(1)){
-        nominaly.add(1);
+    let tab = [];
+    if (!nominaly.includes(1)) {
+        nominaly.push(1);
     }
-    while(suma>0){
-        for(let i = 0; i < nominaly.length; i++){
-            if(suma-nominaly[i]>0){
-                suma=-nominaly[i];
-                tab[i]++;
-            }
+    nominaly.sort(compareNr);
+
+    for (let i = 0; i < nominaly.length; i++) {
+        tab[i] = 0;
+    }
+
+    for (let i = 0; i < nominaly.length; i++) {
+        while (suma - nominaly[i] >= 0) {
+            suma = suma - nominaly[i];
+            tab[i]++;
         }
-        console.log(tab)
+    }
+    console.log("Wartość " + wartosc + " można rozmienić w następujący sposób:");
+    for (let i = 0; i < nominaly.length; i++) {
+        console.log(nominaly[i] + " - " + tab[i] + " sztuk");
     }
 }
+
+rozmieniarka(5243, [250, 100, 500, 10]);
