@@ -1,4 +1,5 @@
 //zadanie 1
+console.log("Zadanie 1")
 function fibonacci(n) {
     if (n === 0) {
         return 0;
@@ -22,6 +23,7 @@ function fibonacci(n) {
 console.log(fibonacci(20));
 
 //zadanie 2
+console.log('\n'+"Zadanie 2")
 function isPalindrom(input) {
     let result;
     for (let i = 0; i < input.length; i++) {
@@ -37,6 +39,7 @@ function isPalindrom(input) {
 console.log(isPalindrom([1, 2, 2, 1]));
 
 //zadanie 3
+console.log('\n'+"Zadanie 3")
 function whatType(input) {
     return typeof (input);
 }
@@ -44,6 +47,7 @@ function whatType(input) {
 console.log(whatType(12));
 
 //zadanie 4
+console.log('\n'+"Zadanie 4")
 function compareNr(a, b) {
     return b - a;
 }
