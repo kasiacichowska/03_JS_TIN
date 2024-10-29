@@ -20,7 +20,8 @@ function fibonacci(n) {
     return suma;
 }
 
-console.log(fibonacci(20));
+console.log(fibonacci(14));
+console.log(fibonacci(4));
 
 //zadanie 2
 console.log('\n'+"Zadanie 2")
@@ -37,6 +38,9 @@ function isPalindrom(input) {
 }
 
 console.log(isPalindrom([1, 2, 2, 1]));
+console.log(isPalindrom([1, 2, 2]));
+console.log(isPalindrom("KAMIL SLIMAK"));
+console.log(isPalindrom("Kasia"))
 
 //zadanie 3
 console.log('\n'+"Zadanie 3")
@@ -45,6 +49,8 @@ function whatType(input) {
 }
 
 console.log(whatType(12));
+console.log(whatType("Kasia"));
+console.log(whatType(true));
 
 //zadanie 4
 console.log('\n'+"Zadanie 4")
@@ -77,3 +83,4 @@ function rozmieniarka(wartosc, nominaly) {
 }
 
 rozmieniarka(5243, [250, 100, 500, 10]);
+rozmieniarka(101, [10]);

@@ -30,7 +30,7 @@ class Produkt {
     }
 
     toString() {
-        return `CENA: ${this._cena}, WAGA: ${this._waga}, SKLAD: ${this._sklad}`;
+        return `[CENA]: ${this._cena}, [WAGA]: ${this._waga}, [SKLAD]: ${this._sklad}`;
     }
 }
 
@@ -67,12 +67,19 @@ class Kosmetyk extends Produkt {
     }
 
     toString() {
-        return `${super.toString()} TYP: ${this._typ}, ZAPACH: ${this._zapach}, KOLOR: ${this.kolor}`;
+        return `${super.toString()} [TYP]: ${this._typ}, [ZAPACH]: ${this._zapach}, [KOLOR]: ${this._kolor}`;
     }
 
 }
 
 const produkcik = new Produkt(100, 50, ["woda", "mąka"]);
 console.log(produkcik.toString());
+produkcik.cena=230;
+produkcik.waga=10;
+console.log(produkcik.toString());
+
 const szminka = new Kosmetyk(500, 20, ["czerowny barwnik", "wazelina"], "makijaz", "rozany", "czerwony");
+console.log(szminka.toString());
+szminka.kolor="rozowy";
+szminka.typ="pielegnacja";
 console.log(szminka.toString());
