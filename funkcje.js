@@ -20,27 +20,38 @@ function fibonacci(n) {
     return suma;
 }
 
-console.log(fibonacci(14));
-console.log(fibonacci(4));
+console.log(fibonacci(10));
+console.log(fibonacci(12));
 
 //zadanie 2
 console.log('\n'+"Zadanie 2")
 function isPalindrom(input) {
-    let result;
-    for (let i = 0; i < input.length; i++) {
-        if (input[i] === input[input.length - i - 1]) {
-            result = true;
-        } else {
-            result = false;
+    for (let i = 0; i < input.length / 2; i++) {
+        if (input[i] !== input[input.length - i - 1]) {
+            return false;
         }
     }
-    return result;
+    return true;
 }
 
+console.log([1, 2, 2, 1]);
 console.log(isPalindrom([1, 2, 2, 1]));
+console.log([1, 2, 2]);
 console.log(isPalindrom([1, 2, 2]));
-console.log(isPalindrom("KAMIL SLIMAK"));
+console.log([2, 2, 2]);
+console.log(isPalindrom([2, 2, 2]));
+console.log([2, 2, 2, 1]);
+console.log(isPalindrom([2, 2, 2, 1]));
+console.log("KAMILSLIMAK");
+console.log(isPalindrom("KAMILSLIMAK"));
+console.log("Kasia");
 console.log(isPalindrom("Kasia"))
+console.log("AAAA");
+console.log(isPalindrom("AAAA"));
+console.log("AAAAA");
+console.log(isPalindrom("AAAAA"));
+console.log("(pusty)");
+console.log(isPalindrom(""));
 
 //zadanie 3
 console.log('\n'+"Zadanie 3")
